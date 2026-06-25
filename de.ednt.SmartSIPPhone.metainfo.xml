@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>de.ednt.SmartSIPPhone</id>
+  <launchable type="desktop-id">de.ednt.SmartSIPPhone.desktop</launchable>
+  <name>Smart-SIP-Phone-Hybrid</name>
+  <summary>The next-generation SIP client by EDNT</summary>
+  <summary xml:lang="de">Der SIP Client der nächsten Generation von EDNT</summary>
+  <description>
+    <p>Smart-SIP-Phone is a modern SIP softphone with integrated web-based UI.</p>
+  </description>
+  <description xml:lang="de">
+    <p>Smart-SIP-Phone ist ein moderner SIP-Softphone mit integrierter Web-Oberfläche.</p>
+  </description>
+  <icon type="stock">de.ednt.SmartSIPPhone</icon>
+  <categories>
+    <category>Network</category>
+    <category>Telephony</category>
+  </categories>
+  <keywords>
+    <keyword>sip</keyword>
+    <keyword>voip</keyword>
+    <keyword>phone</keyword>
+    <keyword>telephony</keyword>
+  </keywords>
+  <developer_name>EDNT It Services GmbH</developer_name>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <url type="homepage">https://www.ednt.de</url>
+  <releases>
+    <release version="1.7.0" date="2026-06-25"/>
+  </releases>
+</component>

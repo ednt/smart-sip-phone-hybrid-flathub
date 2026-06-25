@@ -1,0 +1,7 @@
+.flatpak-builder/
+_flatpak-build/
+_flatpak-repo/
+*.flatpak
+Smart-SIP-Phone-Hybrid
+Icon512.png
+extra-libs/

@@ -1,0 +1,28 @@
+# smart-sip-phone-hybird-flathub
+
+Flathub source repository for **Smart-SIP-Phone Hybrid** (`de.ednt.SmartSIPPhone`).
+
+**Do not edit this repository manually.** It is populated by
+`scripts/ship_to_github.bash` in the
+[smart-sip-phone-stack](https://github.com/ednt/smart-sip-phone-stack) project.
+
+## Layout
+
+| Path | Origin |
+|------|--------|
+| `de.ednt.SmartSIPPhone.yml` | Rendered Flathub manifest (git tag + release archive) |
+| `smart-sip-phone-launch.sh`, desktop, metainfo | Stack `flatpak/smart-sip-phone-hybrid/` |
+| `alsa-config/` | Stack `flatpak/smart-sip-phone-hybrid/alsa-config/` |
+| Release tarball (`Smart-SIP-Phone-Hybrid`, `Icon512.png`, `extra-libs/`) | GitHub Release asset, not in git tree |
+
+## Build locally (verify)
+
+```bash
+git clone https://github.com/ednt/smart-sip-phone-hybird-flathub.git
+cd smart-sip-phone-hybird-flathub
+git checkout vX.Y.Z
+flatpak-builder --force-clean --install-deps-from=flathub \
+  _flatpak-build _flatpak-repo de.ednt.SmartSIPPhone.yml
+```
+
+The manifest downloads the versioned release archive from GitHub Releases.
