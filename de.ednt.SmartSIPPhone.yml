@@ -27,11 +27,6 @@ modules:
   - name: smart-sip-phone
     buildsystem: simple
     build-commands:
-      - |
-        curl -L --fail -o flathub-bundle.tar.xz "https://github.com/ednt/smart-sip-phone-hybird-flathub/releases/download/v1.7.0/smart-sip-phone-hybrid-1.7.0-flathub.tar.xz"
-        echo "72347dc7eba3d7ed646b997590b484c08e96bdf6907ecbaec6d8c3e72fd1922c  flathub-bundle.tar.xz" | sha256sum -c -
-        tar -xJf flathub-bundle.tar.xz
-        rm -f flathub-bundle.tar.xz
       - install -Dm755 Smart-SIP-Phone-Hybrid /app/bin/Smart-SIP-Phone-Hybrid
       - install -Dm755 smart-sip-phone-launch.sh /app/bin/smart-sip-phone-launch
       - install -Dm644 de.ednt.SmartSIPPhone.desktop /app/share/applications/de.ednt.SmartSIPPhone.desktop
@@ -62,3 +57,7 @@ modules:
         path: de.ednt.SmartSIPPhone.desktop
       - type: file
         path: de.ednt.SmartSIPPhone.metainfo.xml
+      - type: archive
+        url: https://github.com/ednt/smart-sip-phone-hybird-flathub/releases/download/v1.7.0/smart-sip-phone-hybrid-1.7.0-flathub.tar.xz
+        sha256: 3999f647248df8243c7780bf9c81c6d0e827f80a92c915cea906ed7440f75925
+        strip-components: 0
