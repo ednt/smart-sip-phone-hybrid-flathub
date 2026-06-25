@@ -3,7 +3,7 @@
 Flathub source repository for **Smart-SIP-Phone Hybrid** (`de.ednt.SmartSIPPhone`).
 
 **Do not edit this repository manually.** It is populated by
-`scripts/ship_flatpak_to_github.bash` in the
+`scripts/build_flatpak.bash` in the
 [smart-sip-phone-stack](https://github.com/ednt/smart-sip-phone-stack) project.
 
 ## Layout
