@@ -10,6 +10,7 @@ Terminal=false
 Categories=Network;Telephony;
 Keywords=sip;voip;phone;telephony;softphone;
 StartupNotify=true
+StartupWMClass=Smart-SIP-Phone-Hybrid
 Actions=ResetSettings;
 
 [Desktop Action ResetSettings]
