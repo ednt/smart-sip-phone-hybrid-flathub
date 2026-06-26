@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+Name=Smart-SIP-Phone
+GenericName=Smart-SIP-Phone
+Comment=The next-generation SIP client by EDNT
+Comment[de]=Der SIP Client der nächsten Generation von EDNT
+Exec=smart-sip-phone-launch
+Icon=eu.acall.smart-sip-phone-hybrid
+Terminal=false
+Categories=Network;Telephony;
+Keywords=sip;voip;phone;telephony;softphone;
+StartupNotify=true
+Actions=ResetSettings;
+
+[Desktop Action ResetSettings]
+Name=Reset Application
+Name[de]=Anwendung zurücksetzen
+Exec=smart-sip-phone-launch -d

@@ -1,6 +1,6 @@
 # smart-sip-phone-hybird-flathub
 
-Flathub source repository for **Smart-SIP-Phone Hybrid** (`de.ednt.SmartSIPPhone`).
+Flathub source repository for **Smart-SIP-Phone** (`eu.acall.smart-sip-phone-hybrid`).
 
 **Do not edit this repository manually.** It is populated by
 `scripts/build_flatpak.bash` in the
@@ -10,7 +10,7 @@ Flathub source repository for **Smart-SIP-Phone Hybrid** (`de.ednt.SmartSIPPhone
 
 | Path | Origin |
 |------|--------|
-| `de.ednt.SmartSIPPhone.yml` | Rendered Flathub manifest (curl + sha256 release archive) |
+| `eu.acall.smart-sip-phone-hybrid.yml` | Rendered Flathub manifest (curl + sha256 release archive) |
 | `smart-sip-phone-launch.sh`, desktop, metainfo | Stack `flatpak/smart-sip-phone-hybrid/` (git) |
 | `alsa-config/` | Stack `flatpak/smart-sip-phone-hybrid/alsa-config/` |
 | Release tarball (`Smart-SIP-Phone-Hybrid`, `Icon512.png`, `extra-libs/`) | GitHub Release asset |
@@ -22,7 +22,7 @@ git clone https://github.com/ednt/smart-sip-phone-hybird-flathub.git
 cd smart-sip-phone-hybird-flathub
 git checkout vX.Y.Z
 flatpak-builder --force-clean --install-deps-from=flathub \
-  _flatpak-build _flatpak-repo de.ednt.SmartSIPPhone.yml
+  _flatpak-build _flatpak-repo eu.acall.smart-sip-phone-hybrid.yml
 ```
 
 The manifest downloads the versioned release archive from GitHub Releases.
