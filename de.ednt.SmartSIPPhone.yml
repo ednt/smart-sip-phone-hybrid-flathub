@@ -91,5 +91,5 @@ modules:
         path: de.ednt.SmartSIPPhone.metainfo.xml
       - type: archive
         url: https://github.com/ednt/smart-sip-phone-hybird-flathub/releases/download/v1.7.0/smart-sip-phone-hybrid-1.7.0-flathub.tar.xz
-        sha256: b58586c7e93c411aab7bd167b7dff327396edad2e782af0f79370abad977751d
+        sha256: a132f2d88ee2a8cee633d71bcbf84fe2e45858c9ecdf8aeb49f8579cf6e449b2
         strip-components: 0
