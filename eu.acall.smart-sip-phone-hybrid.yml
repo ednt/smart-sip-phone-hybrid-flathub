@@ -101,5 +101,5 @@ modules:
         path: eu.acall.smart-sip-phone-hybrid.metainfo.xml
       - type: archive
         url: https://github.com/ednt/smart-sip-phone-hybrid-flathub/releases/download/v1.7.0/smart-sip-phone-hybrid-1.7.0-flathub.tar.xz
-        sha256: 8b73c13211006ed88fb3d3935af9fa7af445909f99d8de061454732263c28175
+        sha256: 9fd2f8936dac062babe855d05f6363b55e4e1058fea3f58971cd4f77b368cc6f
         strip-components: 0

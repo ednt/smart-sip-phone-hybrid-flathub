@@ -2,27 +2,49 @@
 
 Flathub source repository for **Smart-SIP-Phone** (`eu.acall.smart-sip-phone-hybrid`).
 
-**Do not edit this repository manually.** It is populated by
-`build/build_flatpak.bash` in the
-[smart-sip-phone-stack](https://github.com/ednt/smart-sip-phone-stack) project.
+**Do not edit this repository manually.** It is populated automatically by
+the build scripts from acall Technologie GmbH.
 
-## Layout
-
-| Path | Origin |
-|------|--------|
-| `eu.acall.smart-sip-phone-hybrid.yml` | Rendered Flathub manifest (curl + sha256 release archive) |
-| `smart-sip-phone-launch.sh`, desktop, metainfo | Stack `build/flatpak/smart-sip-phone-hybrid/` (git) |
-| `alsa-config/` | Stack `build/flatpak/smart-sip-phone-hybrid/alsa-config/` |
-| Release tarball (`Smart-SIP-Phone-Hybrid`, `Icon512.png`, `extra-libs/`) | GitHub Release asset |
-
-## Build locally (verify)
-
+## Setup
 ```bash
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 git clone https://github.com/ednt/smart-sip-phone-hybrid-flathub.git
 cd smart-sip-phone-hybrid-flathub
-git checkout vX.Y.Z
-flatpak-builder --force-clean --install-deps-from=flathub \
-  _flatpak-build _flatpak-repo eu.acall.smart-sip-phone-hybrid.yml
 ```
 
-The manifest downloads the versioned release archive from GitHub Releases.
+## Optional: checkout specific release
+```bash
+git checkout vX.Y.Z   # optional;
+```
+
+## Build
+
+```bash
+flatpak-builder \
+  --force-clean \
+  --install-deps-from=flathub \
+  --repo=_flatpak-repo \
+  _flatpak-build \
+  eu.acall.smart-sip-phone-hybrid.yml
+```
+
+### Bundle
+
+```bash
+flatpak build-bundle \
+  --runtime-repo=https://dl.flathub.org/repo/flathub.flatpakrepo \
+  _flatpak-repo \
+  smart-sip-phone-hybrid.flatpak \
+  eu.acall.smart-sip-phone-hybrid
+```
+
+### Install
+
+```bash
+flatpak install --user smart-sip-phone-hybrid.flatpak
+```
+
+### Run
+```bash
+flatpak run eu.acall.smart-sip-phone-hybrid
+```
