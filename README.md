@@ -1,4 +1,4 @@
-# smart-sip-phone-hybird-flathub
+# smart-sip-phone-hybrid-flathub
 
 Flathub source repository for **Smart-SIP-Phone** (`eu.acall.smart-sip-phone-hybrid`).
 
@@ -18,8 +18,8 @@ Flathub source repository for **Smart-SIP-Phone** (`eu.acall.smart-sip-phone-hyb
 ## Build locally (verify)
 
 ```bash
-git clone https://github.com/ednt/smart-sip-phone-hybird-flathub.git
-cd smart-sip-phone-hybird-flathub
+git clone https://github.com/ednt/smart-sip-phone-hybrid-flathub.git
+cd smart-sip-phone-hybrid-flathub
 git checkout vX.Y.Z
 flatpak-builder --force-clean --install-deps-from=flathub \
   _flatpak-build _flatpak-repo eu.acall.smart-sip-phone-hybrid.yml
