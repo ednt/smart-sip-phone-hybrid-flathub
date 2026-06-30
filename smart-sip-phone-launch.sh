@@ -2,7 +2,22 @@
 set -e
 
 PROGRAM_NAME="Smart-SIP-Phone-Hybrid"
-APP_DATA_DIR="${XDG_DATA_HOME:-${HOME}/.local/share}/${PROGRAM_NAME}"
+
+# Flatpak sets XDG_DATA_HOME to ~/.var/app/<id>/data but leaves HOME at the host
+# home directory. PureBasic maps ProgramData to $HOME/.local/share on Linux, so
+# point HOME at the per-app sandbox and keep data under .local/share there.
+if [ -n "${FLATPAK_ID:-}" ]; then
+  SANDBOX_HOME="${XDG_DATA_HOME%/data}"
+  export HOME="$SANDBOX_HOME"
+  APP_DATA_DIR="${HOME}/.local/share/${PROGRAM_NAME}"
+  LEGACY_DATA_DIR="${XDG_DATA_HOME}/${PROGRAM_NAME}"
+  if [ -d "$LEGACY_DATA_DIR" ]; then
+    mkdir -p "$APP_DATA_DIR"
+    cp -an "$LEGACY_DATA_DIR"/. "$APP_DATA_DIR"/ 2>/dev/null || true
+  fi
+else
+  APP_DATA_DIR="${XDG_DATA_HOME:-${HOME}/.local/share}/${PROGRAM_NAME}"
+fi
 
 mkdir -p "$APP_DATA_DIR"
 touch "${APP_DATA_DIR}/extract_on_next_start"
