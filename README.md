@@ -17,12 +17,12 @@ cd smart-sip-phone-hybrid-flathub
 git checkout vX.Y.Z   # optional;
 ```
 
+## Flathub submission
+
+x86_64 only. The Flathub PR must include **`flathub.json`** next to the manifest
+(see [Flathub requirements](https://docs.flathub.org/docs/for-app-authors/requirements#flathubjson)).
+
 ## Build
-
-x86_64 only (`only-arches` in manifest). The release archive contains binaries and
-all install files (launch script, desktop, metainfo, alsa-config); the Flathub
-submission needs only `eu.acall.smart-sip-phone-hybrid.yml`.
-
 ```bash
 flatpak-builder \
   --force-clean \
