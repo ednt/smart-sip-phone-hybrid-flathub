@@ -10,8 +10,6 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --socket=pulseaudio
-  - --device=input
-  - --env=WEBKIT_DISABLE_DMABUF_RENDERER=1
 
 modules:
   - name: smart-sip-phone
@@ -85,9 +83,7 @@ modules:
         done
     sources:
       - type: archive
-        url: https://github.com/ednt/smart-sip-phone-hybrid-flathub/releases/download/v1.7.0/smart-sip-phone-hybrid-1.7.0-flathub.tar.xz
-        sha256: 055736362c60dc0a9d819c57d9090c8186921dfbc985112d0a3c34080f2beac9
+        url: https://github.com/ednt/smart-sip-phone-hybrid-flathub/releases/download/v1.7.0/smart-sip-phone-hybrid-1.7.0-flathub-2.tar.xz
+        sha256: 311a2516b77d3ffb23a2cf70d4d354ff5a0f01ea260191e749dd6f1abba55d64
         strip-components: 0
-        only-arches:
-          - x86_64
 
