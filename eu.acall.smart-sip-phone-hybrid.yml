@@ -10,8 +10,8 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --socket=pulseaudio
-  # pw-mon: PipeWire-Geraete hotplug (PipeWire_Monitor.pbi)
-  - --filesystem=xdg-run/pipewire-0
+  # pw-mon: PipeWire-Device hotplug (PipeWire_Monitor)
+  - --filesystem=xdg-run/pipewire-0:ro
 
 modules:
   - name: smart-sip-phone
@@ -36,6 +36,6 @@ modules:
       - cp -a extra-libs/. /app/lib/
     sources:
       - type: archive
-        url: https://github.com/ednt/smart-sip-phone-hybrid-flathub/releases/download/v1.7.0/smart-sip-phone-hybrid-1.7.0-flathub-4.tar.xz
-        sha256: e967a18a5a73846b5c2855e674e1c856dfee07c329e3980b71ebd9c573fea7c0
+        url: https://github.com/ednt/smart-sip-phone-hybrid-flathub/releases/download/v1.7.0/smart-sip-phone-hybrid-1.7.0-flathub-5.tar.xz
+        sha256: cb8b6df7221886b9784bf285f997ed05c63daef6b18e6082781f7c53f8870ffb
         strip-components: 0
