@@ -11,12 +11,12 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.7.0-flathub.5/1_ssp_flatpak_light_1280x720.png</image>
+      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.7.0-flathub.6/1_ssp_flatpak_light_1280x720.png</image>
       <caption>Main window (light theme)</caption>
       <caption xml:lang="de">Hauptfenster (helles Design)</caption>
     </screenshot>
     <screenshot>
-      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.7.0-flathub.5/2_ssp_flatpak_dark_1280x720.png</image>
+      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.7.0-flathub.6/2_ssp_flatpak_dark_1280x720.png</image>
       <caption>Main window (dark theme)</caption>
       <caption xml:lang="de">Hauptfenster (dunkles Design)</caption>
     </screenshot>
@@ -40,6 +40,6 @@
   <url type="homepage">https://www.ednt.de</url>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="1.7.0" date="2026-07-02"/>
+    <release version="1.7.0" date="2026-07-03"/>
   </releases>
 </component>
