@@ -1,0 +1,12 @@
+Smart-SIP-Phone Hybrid – Proprietary Software License
+
+Copyright (c) acall Technologies GmbH. All rights reserved.
+
+The complete license terms (AGB) are available at:
+https://www.smart-sip-phone.com/de/1720.html
+
+Use, installation, and redistribution of unmodified copies via
+Flathub are permitted only under those terms.
+
+Bundled open-source components are listed in THIRD-PARTY-LICENSES
+and are subject to their respective licenses.
