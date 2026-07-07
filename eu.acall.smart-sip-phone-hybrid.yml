@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: MIT
 app-id: eu.acall.smart-sip-phone-hybrid
 runtime: org.gnome.Platform
 runtime-version: '50'
@@ -29,12 +28,10 @@ modules:
       - install -Dm644 Icon128x128.png /app/share/icons/hicolor/128x128/apps/eu.acall.smart-sip-phone-hybrid.png
       - install -Dm644 Icon256x256.png /app/share/icons/hicolor/256x256/apps/eu.acall.smart-sip-phone-hybrid.png
       - install -Dm644 Icon512x512.png /app/share/icons/hicolor/512x512/apps/eu.acall.smart-sip-phone-hybrid.png
-      - install -Dm644 EULA.txt /app/share/licenses/eu.acall.smart-sip-phone-hybrid/EULA.txt
-      - install -Dm644 THIRD-PARTY-LICENSES /app/share/licenses/eu.acall.smart-sip-phone-hybrid/THIRD-PARTY-LICENSES
       - mkdir -p /app/lib
       - cp -a extra-libs/. /app/lib/
     sources:
       - type: archive
-        url: https://github.com/ednt/smart-sip-phone-hybrid-flathub/releases/download/v1.7.0/smart-sip-phone-hybrid-1.7.0-flathub-8.tar.xz
-        sha256: f8695f71751086140fc8b7739cf002c7b3b249285b938cefb3eea086f2954e51
+        url: https://github.com/ednt/smart-sip-phone-hybrid-flathub/releases/download/v1.7.0/smart-sip-phone-hybrid-1.7.0-flathub-9.tar.xz
+        sha256: fd0cf93c00000de9c4ab15a014d612af7e9731eafacef6cac868837d825e6d96
         strip-components: 0
