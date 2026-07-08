@@ -11,12 +11,12 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.7.0-flathub.9/1_ssp_flatpak_light_1280x720.png</image>
+      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.7.0-flathub.10/1_ssp_flatpak_light_1280x720.png</image>
       <caption>Main window (light theme)</caption>
       <caption xml:lang="de">Hauptfenster (helles Design)</caption>
     </screenshot>
     <screenshot>
-      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.7.0-flathub.9/2_ssp_flatpak_dark_1280x720.png</image>
+      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.7.0-flathub.10/2_ssp_flatpak_dark_1280x720.png</image>
       <caption>Main window (dark theme)</caption>
       <caption xml:lang="de">Hauptfenster (dunkles Design)</caption>
     </screenshot>
@@ -36,10 +36,10 @@
     <name>EDNT It Services GmbH</name>
   </developer>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LicenseRef-proprietary</project_license>
-  <url type="homepage">https://www.ednt.de</url>
+  <project_license>LicenseRef-proprietary=https://www.smart-sip-phone.com/de/1720.html</project_license>
+  <url type="homepage">https://www.smart-sip-phone.com</url>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="1.7.0" date="2026-07-07"/>
+    <release version="1.7.0" date="2026-07-08"/>
   </releases>
 </component>
