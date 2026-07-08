@@ -3,6 +3,12 @@ set -e
 
 PROGRAM_NAME="Smart-SIP-Phone-Hybrid"
 
+# Host home before Flatpak retargets HOME (needed for X11 cookie on XWayland).
+FLATPAK_HOST_HOME=""
+if [ -n "${FLATPAK_ID:-}" ]; then
+  FLATPAK_HOST_HOME=$(getent passwd "$(id -u)" 2>/dev/null | cut -d: -f6)
+fi
+
 # Flatpak sets XDG_DATA_HOME to ~/.var/app/<id>/data but leaves HOME at the host
 # home directory. PureBasic maps ProgramData to $HOME/.local/share on Linux, so
 # point HOME at the per-app sandbox and keep data under .local/share there.
@@ -22,14 +28,30 @@ fi
 mkdir -p "$APP_DATA_DIR"
 touch "${APP_DATA_DIR}/extract_on_next_start"
 export WEBKIT_DISABLE_DMABUF_RENDERER="${WEBKIT_DISABLE_DMABUF_RENDERER:-1}"
-export GDK_BACKEND="${GDK_BACKEND:-x11}"
+
+# Do not force GDK_BACKEND=x11: on Wayland hosts Flatpak exposes wayland-0; forcing x11
+# with an empty DISPLAY yields "cannot open display". Prefer auto (GTK picks Wayland),
+# or wayland when the compositor socket is present.
+if [ -z "${GDK_BACKEND:-}" ] && [ -n "${WAYLAND_DISPLAY:-}" ] \
+    && [ -S "${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}" ]; then
+  export GDK_BACKEND=wayland
+fi
+
+# XWayland / pure X11: use the host Xauthority cookie from the real home directory.
+if [ -n "${FLATPAK_HOST_HOME}" ] && [ -f "${FLATPAK_HOST_HOME}/.Xauthority" ]; then
+  export XAUTHORITY="${FLATPAK_HOST_HOME}/.Xauthority"
+fi
+
 export PATH="/app/bin:${PATH}"
 export LD_LIBRARY_PATH="/app/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
 
-# PipeWire/PulseAudio: Host-Socket fuer ALSA-Geraeteliste (aplay/arecord)
+# PipeWire/PulseAudio: Host-Sockets fuer ALSA (aplay/arecord) und pw-mon (Geraete hotplug)
 runtime_dir="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 if [ -S "${runtime_dir}/pulse/native" ]; then
   export PULSE_SERVER="unix:${runtime_dir}/pulse/native"
+fi
+if [ -d "${runtime_dir}/pipewire-0" ]; then
+  export PIPEWIRE_RUNTIME_DIR="${runtime_dir}/pipewire-0"
 fi
 export ALSA_CONFIG_PATH="${ALSA_CONFIG_PATH:-/usr/share/alsa/alsa-flatpak.conf}"
 unset ALSA_CONFIG_DIR
