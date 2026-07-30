@@ -5,6 +5,10 @@ Flathub source repository for **Smart-SIP-Phone** (`eu.acall.smart-sip-phone-hyb
 **Do not edit this repository manually.** It is populated automatically by
 the build scripts from acall Technologie GmbH.
 
+After a GitHub release, `build_flatpak.bash` also updates the official Flathub
+app repository (`flathub/eu.acall.smart-sip-phone-hybrid`) with the new
+manifest URL and sha256 (unless `--skip-flathub-store` / `--no-release`).
+
 ## Setup
 ```bash
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
