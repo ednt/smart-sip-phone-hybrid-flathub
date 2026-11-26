@@ -3,7 +3,7 @@
   <id>eu.acall.smart-sip-phone-hybrid</id>
   <launchable type="desktop-id">eu.acall.smart-sip-phone-hybrid.desktop</launchable>
   <name>Smart-SIP-Phone</name>
-  <summary>The next-generation SIP client by EDNT</summary>
+  <summary>The next-generation SIP client by acallTechnologies GmbH</summary>
   <summary xml:lang="de">Der SIP Client der nächsten Generation von acall Technologies GmbH</summary>
   <description>
     <p>Smart-SIP-Phone is a modern SIP softphone with an integrated web-based user interface for voice calls, contacts, and telephony settings.</p>
@@ -11,12 +11,12 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.8.0-flathub.3/1_ssp_flatpak_light_1280x720.png</image>
+      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.9.0-flathub.1/1_ssp_flatpak_light_1280x720.png</image>
       <caption>Main window (light theme)</caption>
       <caption xml:lang="de">Hauptfenster (helles Design)</caption>
     </screenshot>
     <screenshot>
-      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.8.0-flathub.3/2_ssp_flatpak_dark_1280x720.png</image>
+      <image type="source" width="1280" height="720">https://raw.githubusercontent.com/ednt/smart-sip-phone-hybrid-flathub/v1.9.0-flathub.1/2_ssp_flatpak_dark_1280x720.png</image>
       <caption>Main window (dark theme)</caption>
       <caption xml:lang="de">Hauptfenster (dunkles Design)</caption>
     </screenshot>
@@ -32,14 +32,14 @@
     <keyword>phone</keyword>
     <keyword>telephony</keyword>
   </keywords>
-  <developer id="de.ednt">
-    <name>EDNT It Services GmbH</name>
+  <developer id="eu.acall">
+    <name>acall Technologies GmbH</name>
   </developer>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary=https://www.smart-sip-phone.com/de/1720.html</project_license>
   <url type="homepage">https://www.smart-sip-phone.com</url>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="1.8.0" date="2026-07-30"/>
+    <release version="1.9.0" date="2026-11-26"/>
   </releases>
 </component>
