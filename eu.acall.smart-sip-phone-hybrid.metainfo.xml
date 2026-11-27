@@ -40,6 +40,29 @@
   <url type="homepage">https://www.smart-sip-phone.com</url>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="1.9.0" date="2026-11-26"/>
+    <release version="1.9.0" date="2026-11-26">
+      <description>
+        <p>AI features, call-history filters, and Linux call-window fixes.</p>
+        <ul>
+          <li>Live call transcription and AI assistant (Settings → AI); optional HTTPS webhook for transcripts</li>
+          <li>Call history: filters for direction, status and grouping (filters are saved; missed calls labeled clearly)</li>
+          <li>Only Pro: contact import from FusionPBX / acall; editable CardDAV and iCloud sources</li>
+          <li>Manual and Forum under Settings → Info; show/hide password; optional switch to call screen on answer</li>
+          <li>License dashboard; redesigned incoming-call popup; smoother contacts/presence with hardware acceleration</li>
+          <li>More stable calls on brief VPN/network flaps; fixed crash when answering via the external call window</li>
+          <li>Incoming-call popup without title bar/double frame; contact and call-screen display fixes</li>
+        </ul>
+        <p xml:lang="de">KI-Funktionen, Filter im Anrufverlauf und Korrekturen am Linux-Anruf-Fenster.</p>
+        <ul>
+          <li xml:lang="de">Live-Transkription und KI-Assistent (Einstellungen → KI); optionaler HTTPS-Webhook für Transkripte</li>
+          <li xml:lang="de">Anrufverlauf: Filter für Richtung, Status und Gruppierung (Filter bleiben erhalten; verpasste Anrufe klar gekennzeichnet)</li>
+          <li xml:lang="de">Only Pro: Kontaktimport von FusionPBX / acall; CardDAV- und iCloud-Quellen nachträglich bearbeitbar</li>
+          <li xml:lang="de">Handbuch und Forum unter Einstellungen → Info; Passwort ein-/ausblendbar; optionaler Wechsel zum Anruffenster beim Annehmen</li>
+          <li xml:lang="de">Lizenz-Dashboard; überarbeitetes Anruf-Popup; flüssigere Kontakte/Presence mit Hardware-Beschleunigung</li>
+          <li xml:lang="de">Stabilere Anrufe bei kurzen VPN-/Netzwechseln; Absturz beim Annehmen über das externe Anruffenster behoben</li>
+          <li xml:lang="de">Anruf-Popup ohne Titelleiste/Doppelrahmen; Korrekturen an Kontakt- und Anrufanzeige</li>
+        </ul>
+      </description>
+    </release>
   </releases>
 </component>
